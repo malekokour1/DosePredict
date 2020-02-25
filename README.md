@@ -1,0 +1,2 @@
+# DosePredict
+In drug development, dose prediction is a routinely conducted quantitative data analysis. It involves combining available relevant preclinical and/or clinical data collectively to conduct modeling and simulation analyses where various dose prediction scenarios are considered. As further data emerges during drug development, dose prediction may undergo several rounds of refinement.  In this project, we present DosePredict, a Shiny-based graphical user interface software that can be used for the conduct of dose predictions.
