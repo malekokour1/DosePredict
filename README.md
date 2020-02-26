@@ -7,15 +7,7 @@ Under Publcation
 ## Installation
 Install R package dependencies:
 ```r
-# Install our "GRmetrics" Bioconductor package and others
-source("http://bioconductor.org/biocLite.R")
-biocLite("GRmetrics")
-biocLite("S4Vectors")
-# Install our "shinyLi" package
-install.packages("devtools")
-devtools::install_github("uc-bd2k/shinyLi")
-# Install CRAN package dependencies
-install.packages(c("shiny","shinyjs","shinyBS","ggplot2","plotly","drc","stringr","readr", "formattable", "plyr", "markdown"))
+install.packages(c("shiny","shinythemes","plotly","ggplot2","plotly","drc","stringr","readr", "formattable", "plyr", "markdown"))
 
 ```
 
