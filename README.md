@@ -1,6 +1,3 @@
-![](WWW/logo2.png)
-<img align="center" width="300" height="300" src="WWW/logo2.png">
-
 <p align="center">
   <img width="200" height="200" src="WWW/logo2.png">
 </p>
