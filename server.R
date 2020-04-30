@@ -36,6 +36,8 @@ library(rmarkdown)
 library(knitr)
 library(plotly)
 library(reshape2)
+library(shinyBS)
+
 #Misc
 set.seed(1234)
 cbPalette <- c(brewer.pal(8,"Set2"),brewer.pal(9,"Set1"),brewer.pal(12,"Set3"))
