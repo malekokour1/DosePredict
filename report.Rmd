@@ -1,0 +1,175 @@
+---
+title: "DosePredict Report"
+output: 
+  html_document:
+    toc: true
+    theme: united
+params:
+  AuthorParam: NA
+  CompoundParam: NA
+  Commentsenterd: NA
+  Modelname: NA
+  ModelParameters: NA
+  DosingParams: NA
+  SafetyParams: NA
+  EfficacyParams: NA
+  NCALimitsParams: NA
+  NCAtable1: NA
+  Efftable1: NA
+  SAFtable1: NA
+  Pkplot: NA
+  plotallNCA1: NA
+  plotSAFNCA1: NA
+  plotEFF1: NA
+  plotEFF2: NA
+---
+
+<style type="text/css">
+
+h1.title {
+  font-size: 38px;
+  color: DarkRed;
+  text-align: center;
+}
+</style> 
+
+
+```{r global_options, include=FALSE}
+knitr::opts_chunk$set(fig.width=12, fig.height=8, fig.path='Figs/',
+                      echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+
+__Date__: `r format(Sys.time(), ' %B %d, %Y')`  
+__Author__: `r params$AuthorParam`   
+__Compound ID__: `r params$CompoundParam`  
+__Run Comments__: `r params$Commentsenterd`
+
+# Simulation Inputs:
+
+## 1- Pharmacokinetic Input:
+The __Pharmacokinetic model__ used is `r params$Modelname`.  
+The __Pharmacokinetic Parameters__ used in the simulations are:    
+```{r Pk Param, echo=F, warning=F}
+# The `params` object is available in the document.
+kable(params$ModelParameters)
+
+```
+
+## 2- Dosing Input:  
+The __dosing infromation__ evaluated in the simulations are:  
+```{r Dosing, echo=F, warning=F}
+# The `params` object is available in the document.
+kable(params$DosingParams)
+
+```
+
+
+## 3- Safety and Efficacy Targets:   
+The __Safety limits__ used in the simulations are:  
+```{r SafetyParams, echo=F, warning=F}
+# The `params` object is available in the document.
+kable(params$SafetyParams)
+
+```
+
+And the __target efficacy concentration limit__ used is:  
+
+```{r Efficacy targets, echo=F, warning=F}
+# The `params` object is available in the document.
+kable(params$EfficacyParams)
+
+```
+
+## 4- NCA Input:   
+
+The NCA calculations results are:    
+
+```{r NCA, echo=F, warning=F}
+# The `params` object is available in the document.
+
+kable(params$NCAtable1,  digits=4)
+
+```
+
+# Results:
+
+## 1- Safety Calculations: 
+
+The safety calculations in relation to safety targets  are:  
+```{r saf table, echo=F, warning=F}
+# The `params` object is available in the document.
+
+kable(params$SAFtable1,  digits=4)
+
+```
+
+
+## 2- Efficacy Calculations:
+
+The efficacy calculations in relation to efficacy targets  are: 
+
+```{r Eff table, echo=F, warning=F}
+# The `params` object is available in the document.
+
+kable(params$Efftable1,  digits=4)
+
+```
+
+## 3- NCA Calculations:
+
+The NCA calculations were done within the below __NCA time frame__:  
+
+```{r NCA time fram, echo=F, warning=F}
+# The `params` object is available in the document.
+kable(params$NCALimitsParams)
+
+```
+
+
+
+# Plots:
+
+## 1- Simulation Plot:
+
+```{r , message = FALSE, echo = FALSE, warning=FALSE}
+# The `params` object is available in the document.
+ggplotly(params$Pkplot,session="knitr")
+    
+```
+
+## 2- NCA Histograms:
+
+```{r , message = FALSE, echo = FALSE, warning=FALSE}
+# The `params` object is available in the document.
+print(params$plotallNCA1)
+#ggplotly(params$plotallNCA1,session="knitr")
+
+```
+
+## 3- Safety Histogram:
+
+```{r , message = FALSE, echo = FALSE, warning=FALSE}
+# The `params` object is available in the document.
+#print(params$plotallNCA1)
+ggplotly(params$plotSAFNCA1,session="knitr")
+
+```
+
+## 4- Efficacy Histograms:
+
+```{r , message = FALSE, echo = FALSE, warning=FALSE}
+# The `params` object is available in the document.
+#print(params$plotallNCA1)
+ggplotly(params$plotEFF1,session="knitr")
+
+```
+```{r , message = FALSE, echo = FALSE, warning=FALSE}
+# The `params` object is available in the document.
+#print(params$plotallNCA1)
+ggplotly(params$plotEFF2,session="knitr")
+
+```
+
+
+END of REPORT
