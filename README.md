@@ -18,5 +18,5 @@ Run the application from the R command line:
 shiny::runGitHub('malekokour1/DosePredict')
 ```
 
-## UserGuide
+## User Guide
 ![](WWW/userguide.JPG)
