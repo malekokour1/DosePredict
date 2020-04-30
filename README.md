@@ -1,4 +1,4 @@
-
+![](WWW/logo2.png)
 <img align="center" width="300" height="300" src="WWW/logo2.png">
 
 ## *DosePredict*
