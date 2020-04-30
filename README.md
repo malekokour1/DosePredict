@@ -7,7 +7,7 @@ Under Publcation
 ## Installation
 Install R package dependencies:
 ```r
-install.packages(c("shiny","shinyjs","shinyBS","shinythemes","shinydashboard","mrgsolve","deSolve","magrittr","ggplot2","plotly","PKNCA",""data.table","dplyr","RColorBrewer","rmarkdown","knitr","reshape2"))
+install.packages(c("shiny","shinyjs","shinyBS","shinythemes","shinydashboard","mrgsolve","deSolve","magrittr","ggplot2","plotly","PKNCA","data.table","dplyr","RColorBrewer","rmarkdown","knitr","reshape2"))
 
 ```
 
