@@ -48,9 +48,9 @@ body <- dashboardBody(
               column(10, h4(tags$a(href='http://DosePredict.com',
                      tags$img(src='logo2.png'),width = "100px", height = "100px"),align = "center")),
               column(10, h4(tags$a(href='https://github.com/malekokour1/DosePredict/blob/master/README.md',
-                                tags$img(src='userguide.jpg'),width = "100px", height = "100px"),align = "center")),
-              column(10, h4(tags$a(href='https://github.com/malekokour1/DosePredict/blob/master/README.md',
-                                tags$img(src='userguide.png'),width = "100px", height = "100px"),align = "center"))
+                                tags$img(src='userguide.jpg'),width = "100px", height = "100px"),align = "center"))#,
+              #column(10, h4(tags$a(href='https://github.com/malekokour1/DosePredict/blob/master/README.md',
+                           #     tags$img(src='userguide.png'),width = "100px", height = "100px"),align = "center"))
            
             #column(10, h4(tags$img(src='userguide.jpg'),width = "100px", height = "100px",align = "center"))
               
